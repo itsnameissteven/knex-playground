@@ -1,10 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
-import Person from '../models/person.model';
-import personService from '../service/person';
 
-// type Request = FastifyRequest<{
-//   Params: { id: string };
-// }>;
+import personService from '../service/person.service';
 
 type PostPerson = FastifyRequest<{
   Body: { firstName: string; lastName: string; email: string };
