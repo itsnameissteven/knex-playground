@@ -7,7 +7,6 @@ class Person extends Model {
   firstName!: string;
   lastName!: string;
   email!: string;
-  count!: string;
 
   $beforeInsert() {
     const now = new Date();
@@ -21,6 +20,20 @@ class Person extends Model {
 
   static get tableName() {
     return 'person';
+  }
+
+  static get jsonSchema() {
+    return {
+      type: 'object',
+      properties: {
+        firstName: { type: 'string' },
+        lastName: { type: 'string' },
+        createdAt: { type: 'string' },
+        updatedAt: { type: 'string' },
+        id: { type: 'string' },
+        email: { type: 'string' },
+      },
+    };
   }
 
   static get modifiers() {

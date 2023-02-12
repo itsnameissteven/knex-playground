@@ -12,6 +12,7 @@
     "@types/node": "^18.13.0",
     "fastify": "^4.13.0",
     "fastify-cli": "^5.7.1",
+    "fastify-objectionjs": "^2.0.0",
     "fastify-tsconfig": "^1.0.1",
     "knex": "^2.4.2",
     "knex-stringcase": "^1.4.6",

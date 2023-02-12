@@ -2,11 +2,11 @@ import { FastifyPluginAsync } from 'fastify';
 import personController from '../controllers/person.controller';
 import personValidation from '../validation/person.validation';
 
-const devices: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
+const person: FastifyPluginAsync = async (fastify, _opts): Promise<void> => {
   fastify.get(
     '/person',
-    personValidation.getAllPerson(fastify),
-    personController.getAllPeople
+    personValidation.getAllPersons(fastify),
+    personController.getAllPersons
   );
 
   fastify.post<{
@@ -18,4 +18,4 @@ const devices: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
   );
 };
 
-export default devices;
+export default person;

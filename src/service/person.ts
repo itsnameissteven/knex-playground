@@ -1,9 +1,26 @@
-const personDAO = require('../dao/person');
-
+import Person from '../models/person.model';
+interface CreatePersonArgs {
+  firstName: string;
+  lastName: string;
+  email: string;
+}
 class PersonService {
-  createPerson({ firstName, lastName, email }: any) {
-    return personDAO.createPerson(firstName, lastName, email);
+  async createPerson({ firstName, lastName, email }: CreatePersonArgs) {
+    const id = await Person.query()
+      .insert({
+        firstName,
+        lastName,
+        email,
+      })
+      .returning('id');
+
+    return id;
+  }
+  async getAllPersons() {
+    return await Person.query().returning('*');
   }
 }
 
-module.exports = new PersonService();
+const personService = new PersonService();
+
+export default personService;

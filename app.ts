@@ -1,4 +1,7 @@
-'use strict';
+import { knexConfig } from './knexconfig';
+('use strict');
+
+import Person from './src/models/person.model';
 
 const path = require('path');
 const AutoLoad = require('@fastify/autoload');
@@ -24,5 +27,11 @@ module.exports = async function (fastify: any, opts: any) {
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'src/routes'),
     options: Object.assign({}, opts),
+  });
+
+  // Connects your models to knex db
+  fastify.register(require('fastify-objectionjs'), {
+    knexConfig,
+    models: [Person],
   });
 };

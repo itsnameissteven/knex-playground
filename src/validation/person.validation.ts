@@ -12,11 +12,8 @@ export const person = {
 };
 
 class PersonValidation {
-  getAllPerson(_fastify: any): RouteShorthandOptions {
+  getAllPersons(_fastify: any): RouteShorthandOptions {
     return {
-      // onRequest(req: any, reply: any, next: any) {
-      //   return { fastify, req, reply, next };
-      // },
       schema: {
         response: {
           200: {
@@ -31,12 +28,8 @@ class PersonValidation {
       },
     };
   }
-  createPerson(fastify: any): RouteShorthandOptions {
+  createPerson(_fastify: any): RouteShorthandOptions {
     return {
-      onRequest(req: any, reply: any, next: any) {
-        console.log(req);
-        return { fastify, req, reply, next };
-      },
       schema: {
         response: {
           200: {

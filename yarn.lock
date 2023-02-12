@@ -419,7 +419,16 @@ fastify-cli@^5.7.1:
     semver "^7.3.5"
     yargs-parser "^21.1.1"
 
-fastify-plugin@^4.0.0:
+fastify-objectionjs@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/fastify-objectionjs/-/fastify-objectionjs-2.0.0.tgz#6688e433e4880e88fb2a320dc288076a55a8ad1d"
+  integrity sha512-8yc94N/2LfxGNJUtKNyI6TxGQe4L6DVyNcb7VbT2jh4VjWq+zV8/N8y1a2wh3QinbxQGDS2sLKHnIjY/29UwPA==
+  dependencies:
+    fastify-plugin "^4.3.0"
+    knex "^2.3.0"
+    objection "^3.0.1"
+
+fastify-plugin@^4.0.0, fastify-plugin@^4.3.0:
   version "4.5.0"
   resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/fastify-plugin/-/fastify-plugin-4.5.0.tgz#8b853923a0bba6ab6921bb8f35b81224e6988d91"
   integrity sha512-79ak0JxddO0utAXAQ5ccKhvs6vX2MGyHHMMsmZkBANrq3hXc1CHzvNPHOcvTsVMEPl5I+NT+RO4YKMGehOfSIg==
@@ -655,7 +664,7 @@ knex-stringcase@^1.4.6:
   dependencies:
     stringcase "^4.3.1"
 
-knex@^2.4.2:
+knex@^2.3.0, knex@^2.4.2:
   version "2.4.2"
   resolved "https://artifactory.spectrumtoolbox.com/artifactory/api/npm/npm/knex/-/knex-2.4.2.tgz#a34a289d38406dc19a0447a78eeaf2d16ebedd61"
   integrity sha512-tMI1M7a+xwHhPxjbl/H9K1kHX+VncEYcvCx5K00M16bWvpYPKAZd6QrCu68PtHAdIZNQPWZn0GVhqVBEthGWCg==
