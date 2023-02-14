@@ -1,0 +1,31 @@
+{
+  "name": "knex-playground",
+  "version": "1.0.0",
+  "description": "testing .....",
+  "main": "index.js",
+  "repository": "git@github.com:itsnameissteven/knex-playground.git",
+  "author": "Steven Mancine <steven.mancine@charter.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/autoload": "^5.7.1",
+    "@fastify/sensible": "^5.2.0",
+    "@types/node": "^18.13.0",
+    "fastify": "^4.13.0",
+    "fastify-cli": "^5.7.1",
+    "fastify-objectionjs": "^2.0.0",
+    "fastify-tsconfig": "^1.0.1",
+    "knex": "^2.4.2",
+    "knex-stringcase": "^1.4.6",
+    "objection": "^3.0.1",
+    "pg": "^8.9.0",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "make-migrate": "knex migrate:make $1",
+    "dev": "tsc && fastify start -w -l info -P dist/app.js",
+    "migrate": "knex migrate:latest --knexfile knexfile.ts"
+  }
+}
